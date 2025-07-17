@@ -1,0 +1,125 @@
+:root {
+  --bg-blur: rgba(255, 255, 255, 0.08);
+  --border-glass: rgba(255, 255, 255, 0.2);
+  --hover-glow: rgba(255, 255, 255, 0.3);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: url("https://images.unsplash.com/photo-1515378791036-0648a3ef77b2")
+    no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 40px 20px;
+  color: #fff;
+}
+
+.container {
+  backdrop-filter: blur(20px);
+  background-color: var(--bg-blur);
+  border: 1px solid var(--border-glass);
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+.profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+p {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border-glass);
+  color: white;
+  padding: 12px 18px;
+  margin: 10px 0;
+  border-radius: 12px;
+  transition: all 0.25s ease;
+  font-weight: 500;
+}
+
+.links a:hover {
+  background-color: var(--hover-glow);
+  transform: scale(1.03);
+}
+
+.links a i {
+  font-size: 18px;
+}
+
+#repos {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.repo {
+  margin-bottom: 12px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.3s ease;
+}
+
+.repo:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.repo a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.repo p {
+  font-size: 13px;
+  opacity: 0.7;
+  margin-top: 5px;
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 20px;
+  }
+  .links a {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+}
